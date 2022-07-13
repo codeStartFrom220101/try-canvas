@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.toolbar {
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: #123456;
+    color: #ddd;
+    position: fixed;
+    bottom: 0;
+}
+
+.range-container {
+    position: relative;
+    width: 230px;
+}
+
+.range {
+    position: absolute;
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.range::-webkit-slider-runnable-track {
+    height: 0;
+}
+
+.range::-webkit-slider-thumb {
+    margin-top: -5px;
+}
+
+.range::-webkit-slider-thumb:hover{
+    cursor: pointer;
+}
+
+.range::before {
+    content: '';
+    position: absolute;
+    top: -2.5px;
+    left: 1px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 195px 5px 0;
+    border-color: transparent rgba(96, 84, 153, 0.5) transparent transparent;
+}
+
+.range-container span {
+    top: -10px;
+    position: absolute;
+    left: 205px;
+}
+
+.color, .erease, .clear {
+    width: 40px;
+    height: 40px;
+    background: rgb(102, 141, 92);
+    border-radius: 2px;
+    border: none;
+    box-shadow: 0 0 5px 3px #192f46;
+    cursor: pointer;
+}
+
+.color:hover, .erease:hover, .clear:hover{
+    background: rgba(102, 141, 92, 0.5);
+}
+
+.color {
+    margin-left: 20px;
+}
+
+.erease{
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+
+.clear {
+    margin-left: auto;
+    font-size: 1.5rem;
+}
